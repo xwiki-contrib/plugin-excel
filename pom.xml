@@ -72,7 +72,7 @@
   </scm>
   <distributionManagement>
     <repository>
-      <id>maven.xwiki.org</id>
+      <id>xwiki-staging</id>
       <name>XWiki Staging Repository</name>
       <url>http://nexus.xwiki.org/nexus/service/local/staging/deploy/maven2/</url>
     </repository>
