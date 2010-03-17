@@ -31,7 +31,7 @@
   </parent>
   <groupId>org.xwiki.contrib</groupId>
   <artifactId>xwiki-plugin-excel</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <name>XWiki Platform - Plugins - Excel</name>
   <packaging>jar</packaging>
   <description>XWiki Platform - Plugins - Excel</description>
@@ -65,9 +65,9 @@
     </dependency>
   </dependencies>
   <scm>
-    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-plugin-excel/tags/xwiki-plugin-excel-1.0</connection>
-    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-plugin-excel/tags/xwiki-plugin-excel-1.0</developerConnection>
-    <url>http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-plugin-excel/tags/xwiki-plugin-excel-1.0</url>
+    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-plugin-excel/trunk</connection>
+    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-plugin-excel/trunk</developerConnection>
+    <url>http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-plugin-excel/trunk</url>
   </scm>
   <distributionManagement>
     <repository>
