@@ -66,9 +66,9 @@
     </dependency>
   </dependencies>
   <scm>
-    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/contrib/sandbox/xwiki-plugin-excel/trunk</connection>
-    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/contrib/sandbox/xwiki-plugin-excel/trunk</developerConnection>
-    <url>http://svn.xwiki.org/svnroot/xwiki/contrib/sandbox/xwiki-plugin-excel/trunk</url>
+    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-plugin-excel/trunk</connection>
+    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-plugin-excel/trunk</developerConnection>
+    <url>http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-plugin-excel/trunk</url>
   </scm>
   <distributionManagement>
     <repository>
@@ -77,4 +77,4 @@
       <url>http://nexus.xwiki.org/nexus/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
-</project>      
+</project> 
