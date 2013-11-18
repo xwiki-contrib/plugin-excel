@@ -31,10 +31,10 @@
   </parent>
   <groupId>org.xwiki.contrib</groupId>
   <artifactId>xwiki-plugin-excel</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.1-SNAPSHOT</version>
   <name>Excel Plugin</name>
   <packaging>jar</packaging>
-  <description>Excel Plugin</description>
+  <description>Extracts data from Excel spreadsheets and view them in wiki pages</description>
   <dependencies>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
@@ -53,11 +53,13 @@
       <version>2.6.12</version>
       <exclusions>
         <exclusion>
+          <!-- We use SLF4J -->
           <groupId>log4j</groupId>
           <artifactId>log4j</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
+    <!-- Test dependencies -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
@@ -91,7 +93,7 @@
       <name>Cristina Lopes</name>
     </developer>
     <developer>
-      <id>ldubost</id>
+      <id>LudovicDubost</id>
       <name>Ludovic Dubost</name>
     </developer>
   </developers>
