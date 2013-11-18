@@ -31,7 +31,7 @@
   </parent>
   <groupId>org.xwiki.contrib</groupId>
   <artifactId>xwiki-plugin-excel</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1</version>
   <name>Excel Plugin</name>
   <packaging>jar</packaging>
   <description>Extracts data from Excel spreadsheets and view them in wiki pages</description>
@@ -101,7 +101,7 @@
     <connection>scm:git:git://github.com/xwiki-contrib/plugin-excel.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/plugin-excel.git</developerConnection>
     <url>https://github.com/xwiki-contrib/plugin-excel</url>
-    <tag>HEAD</tag>
+    <tag>xwiki-plugin-excel-1.1</tag>
   </scm>
   <distributionManagement>
     <repository>
