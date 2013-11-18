@@ -31,11 +31,12 @@ import java.io.InputStream;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ExcelDataSource extends DefaultDataSource implements DataSource
 {
@@ -49,7 +50,7 @@ public class ExcelDataSource extends DefaultDataSource implements DataSource
 
     public static final boolean DEFAULT_HAS_HEADER_COLUMN = true;
 
-    private static final Log LOG = LogFactory.getLog(ExcelDataSource.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ExcelDataSource.class);
 
     public ExcelDataSource()
     {
@@ -113,12 +114,12 @@ public class ExcelDataSource extends DefaultDataSource implements DataSource
             sheet = workbook.getSheet(sheetname);
         }
         if (sheet == null) {
-            LOG.error("Invalid sheetname: " + sheetname);
+            LOGGER.error("Invalid sheetname: " + sheetname);
             return;
         }
         StringTokenizer tokenizer = new StringTokenizer(range, "-");
         if (tokenizer.countTokens() != 2) {
-            LOG.error("Invalid range: " + range);
+            LOGGER.error("Invalid range: " + range);
             return;
         }
         String fromCell = tokenizer.nextToken();
@@ -142,7 +143,7 @@ public class ExcelDataSource extends DefaultDataSource implements DataSource
         try {
             fromRowIndex = Integer.valueOf(fromCell.substring(i)).intValue() - 1;
         } catch (Exception e) {
-            LOG.error("Invalid from cell: " + fromCell, e);
+            LOGGER.error("Invalid from cell: " + fromCell, e);
             return;
         }
 
@@ -163,7 +164,7 @@ public class ExcelDataSource extends DefaultDataSource implements DataSource
         try {
             toRowIndex = Integer.valueOf(toCell.substring(i)).intValue() - 1;
         } catch (Exception e) {
-            LOG.error("Invalid to cell: " + toCell, e);
+            LOGGER.error("Invalid to cell: " + toCell, e);
             return;
         }
 
@@ -217,7 +218,7 @@ public class ExcelDataSource extends DefaultDataSource implements DataSource
     {
         XWikiAttachment attachment = context.getDoc().getAttachment(attachname);
         if (attachment == null) {
-            LOG.error("Couldn't find the requested attachment: " + attachname);
+            LOGGER.error("Couldn't find the requested attachment: " + attachname);
             return;
         }
         byte[] array;

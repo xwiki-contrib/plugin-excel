@@ -25,49 +25,80 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.xpn.xwiki.platform.plugins</groupId>
-    <artifactId>xwiki-plugins</artifactId>
-    <version>21</version>
+    <groupId>org.xwiki.commons</groupId>
+    <artifactId>xwiki-commons-pom</artifactId>
+    <version>4.5.4</version>
   </parent>
   <groupId>org.xwiki.contrib</groupId>
   <artifactId>xwiki-plugin-excel</artifactId>
   <version>1.1-SNAPSHOT</version>
-  <name>XWiki Platform - Plugins - Excel</name>
+  <name>Excel Plugin</name>
   <packaging>jar</packaging>
-  <description>XWiki Platform - Plugins - Excel</description>
-  <properties>
-    <platform.core.version>2.2.2</platform.core.version>
-  </properties>
+  <description>Excel Plugin</description>
   <dependencies>
     <dependency>
-      <groupId>com.xpn.xwiki.platform</groupId>
-      <artifactId>xwiki-core</artifactId>
-      <version>${platform.core.version}</version>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-oldcore</artifactId>
+      <version>${commons.version}</version>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-chart-plugin</artifactId>
+      <version>${commons.version}</version>
     </dependency>
     <dependency>
       <groupId>net.sourceforge.jexcelapi</groupId>
       <artifactId>jxl</artifactId>
       <version>2.6.3</version>
+      <exclusions>
+        <exclusion>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
-      <groupId>com.xpn.xwiki.platform</groupId>
-      <artifactId>xwiki-core</artifactId>
-      <version>${platform.core.version}</version>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
       <scope>test</scope>
-      <type>test-jar</type>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
-      <artifactId>xwiki-core-shared-tests</artifactId>
-      <version>${platform.core.version}</version>
+      <artifactId>xwiki-platform-oldcore</artifactId>
+      <version>${commons.version}</version>
+      <type>test-jar</type>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-test</artifactId>
+      <version>${commons.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <issueManagement>
+    <system>jira</system>
+    <url>http://jira.xwiki.org/browse/XCONTRIB/component/10851</url>
+  </issueManagement>
+  <developers>
+    <developer>
+      <id>ganji</id>
+      <name>Yasser Ganjisaffar</name>
+    </developer>
+    <developer>
+      <id>CristinaLopes</id>
+      <name>Cristina Lopes</name>
+    </developer>
+    <developer>
+      <id>ldubost</id>
+      <name>Ludovic Dubost</name>
+    </developer>
+  </developers>
   <scm>
-    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-plugin-excel/trunk</connection>
-    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-plugin-excel/trunk</developerConnection>
-    <url>http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-plugin-excel/trunk</url>
+    <connection>scm:git:git://github.com/xwiki-contrib/plugin-excel.git</connection>
+    <developerConnection>scm:git:git@github.com:xwiki-contrib/plugin-excel.git</developerConnection>
+    <url>https://github.com/xwiki-contrib/plugin-excel</url>
   </scm>
   <distributionManagement>
     <repository>
@@ -76,4 +107,4 @@
       <url>http://nexus.xwiki.org/nexus/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
-</project> 
+</project>
